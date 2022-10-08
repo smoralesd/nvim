@@ -49,9 +49,17 @@ return packer.startup(function(use)
 
   use 'folke/tokyonight.nvim' -- colorscheme
 
+  -- Better syntax support
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
+  }
+
+  -- Package manager for LSP servers
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
