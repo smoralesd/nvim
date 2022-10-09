@@ -47,6 +47,8 @@ return packer.startup(function(use)
   -- Plugin Mangager
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
+  use 'kyazdani42/nvim-web-devicons'
+
   use 'folke/tokyonight.nvim' -- colorscheme
 
   -- Better syntax support
@@ -68,7 +70,7 @@ return packer.startup(function(use)
   -- status line
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
   -- File explorer/finder
