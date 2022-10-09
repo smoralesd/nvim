@@ -27,3 +27,9 @@ keymap("n", "<Leader>q", ":quit<cr>", { noremap = true, silent = true, desc = "C
 keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true, desc = "Toogle file tree explorer" })
 
 keymap("n", "<C-p>", ":Telescope find_files<cr>", { noremap = true, silent = true, desc = "Telescope: find file" })
+
+-- Git
+keymap("n", "<Leader>gp", ":Gitsigns preview_hunk<cr>", { noremap = true, silent = true, desc = "Git: preview hunk under cursor" })
+keymap("n", "<Leader>ggp", ":Gitsigns prev_hunk<cr>", { noremap = true, silent = true, desc = "Git: go to prev hunk" })
+keymap("n", "<Leader>ggn", ":Gitsigns next_hunk<cr>", { noremap = true, silent = true, desc = "Git: go to prev hunk" })
+keymap("n", "<Leader>gl", ":Gitsigns setqflist<cr>", { noremap = true, silent = true, desc = "Git: list all hunks" })
