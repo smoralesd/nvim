@@ -86,6 +86,7 @@ return packer.startup(function(use)
   -- Git integration
   use 'lewis6991/gitsigns.nvim'
 
+  use 'onsails/lspkind-nvim' -- vscode-like pictograms, for nvim-cmp mostly
     -- Snip
   use 'L3MON4D3/LuaSnip'
 

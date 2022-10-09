@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+local lspkind = require 'lspkind'
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -21,6 +23,9 @@ cmp.setup({
     { name = 'nvim_lsp' }, -- from language server
     { name = 'buffer' }, -- from current buffer
   }),
+  formatting = {
+    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+  }
 })
 
 vim.cmd [[
