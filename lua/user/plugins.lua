@@ -87,12 +87,15 @@ return packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
 
   use 'onsails/lspkind-nvim' -- vscode-like pictograms, for nvim-cmp mostly
-    -- Snip
+  -- Snip
   use 'L3MON4D3/LuaSnip'
 
   -- Autocompletion
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion engine
+
+  -- surround selection/pairs
+  use { 'kylechui/nvim-surround', tag = 'v1.0.0' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
