@@ -12,10 +12,10 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<c-Left>", "<C-w>h", { noremap = true, silent = true , desc = "Move to the window on the Left"})
-keymap("n", "<c-Down>", "<C-w>j", { noremap = true, silent = true , desc = "Move to the window Below" } )
-keymap("n", "<c-Up>", "<C-w>k", { noremap = true, silent = true , desc = "Move to the window Above" } )
-keymap("n", "<c-Right>", "<C-w>l", { noremap = true, silent = true, desc = "Move to the window on the Right" } )
+keymap("n", "<c-Left>", "<C-w>h", { noremap = true, silent = true, desc = "Move to the window on the Left" })
+keymap("n", "<c-Down>", "<C-w>j", { noremap = true, silent = true, desc = "Move to the window Below" })
+keymap("n", "<c-Up>", "<C-w>k", { noremap = true, silent = true, desc = "Move to the window Above" })
+keymap("n", "<c-Right>", "<C-w>l", { noremap = true, silent = true, desc = "Move to the window on the Right" })
 
 -- fast vertical split
 keymap("n", "<Leader>v", ":vsplit<cr>", { noremap = true, silent = true, desc = "Vertical split" })
@@ -23,3 +23,4 @@ keymap("n", "<Leader>v", ":vsplit<cr>", { noremap = true, silent = true, desc = 
 -- File/buffer operations
 keymap("n", "<Leader>w", ":write<cr>", { noremap = true, silent = true, desc = "Write current buffer" })
 keymap("n", "<Leader>q", ":quit<cr>", { noremap = true, silent = true, desc = "Close current buffer" })
+keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true, desc = "Toogle file tree explorer" })
