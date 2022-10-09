@@ -86,6 +86,13 @@ return packer.startup(function(use)
   -- Git integration
   use 'lewis6991/gitsigns.nvim'
 
+    -- Snip
+  use 'L3MON4D3/LuaSnip'
+
+  -- Autocompletion
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp' -- Completion engine
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
