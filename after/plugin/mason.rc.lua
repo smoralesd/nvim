@@ -1,5 +1,5 @@
-local status_ok, mason = pcall(require, "mason")
-if not status_ok then
+local mason_ok, mason = pcall(require, "mason")
+if not mason_ok then
   return
 end
 
@@ -13,8 +13,8 @@ mason.setup({
   }
 })
 
-local status_ok, mason_lsp = pcall(require, "mason-lspconfig")
-if not status_ok then
+local mlsp_ok, mason_lsp = pcall(require, "mason-lspconfig")
+if not mlsp_ok then
   return
 end
 
