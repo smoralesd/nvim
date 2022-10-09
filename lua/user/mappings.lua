@@ -23,4 +23,7 @@ keymap("n", "<Leader>v", ":vsplit<cr>", { noremap = true, silent = true, desc = 
 -- File/buffer operations
 keymap("n", "<Leader>w", ":write<cr>", { noremap = true, silent = true, desc = "Write current buffer" })
 keymap("n", "<Leader>q", ":quit<cr>", { noremap = true, silent = true, desc = "Close current buffer" })
+
 keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true, desc = "Toogle file tree explorer" })
+
+keymap("n", "<C-p>", ":Telescope find_files<cr>", { noremap = true, silent = true, desc = "Telescope: find file" })
