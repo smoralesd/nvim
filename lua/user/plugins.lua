@@ -97,6 +97,14 @@ return packer.startup(function(use)
   -- surround selection/pairs
   use { 'kylechui/nvim-surround', tag = 'v1.0.0' }
 
+  -- comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
