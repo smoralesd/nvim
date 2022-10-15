@@ -16,4 +16,4 @@ vim.opt.signcolumn = 'yes' -- always show the sign/gutter column so the content 
 
 vim.opt.showmode = false -- mode is shown via lualine
 
-vim.cmd [[colorscheme tokyonight-storm]]
+vim.cmd [[colorscheme tokyonight-night]]
