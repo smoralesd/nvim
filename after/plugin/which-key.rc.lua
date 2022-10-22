@@ -39,11 +39,17 @@ local leader_mappings = {
     name = "Terminal",
     t = { "<cmd>ToggleTerm<cr>", "Toggle the terminal" }
   },
+  h = {
+    name = "Highlights",
+    l = { "<cmd>set list!<cr>", "Toggle whitespace visibility" },
+    w = { "<cmd>match TrailingWhitespace /\\s\\+$/<cr>", "Highlights trailing whitespaces" },
+    o = { "<cmd>match<cr>", "Turn off highlights" },
+  },
   w = { "<cmd>w<cr>", "Write file" },
   q = { "<cmd>q<cr>", "Close file" },
   v = { "<cmd>vsplit<cr>", "Vertical split" },
   e = { "<cmd>NvimTreeToggle<cr>", "Toogle file tree explorer" }
 }
 
-wk.setup({})
+wk.setup()
 wk.register(leader_mappings, opts)
