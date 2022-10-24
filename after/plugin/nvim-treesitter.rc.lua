@@ -6,7 +6,8 @@ end
 treesitter.setup({
   ensure_installed = {
     "lua",
-    "typescript"
+    "typescript",
+    "markdown"
   },
   highlight = {
     enable = true
