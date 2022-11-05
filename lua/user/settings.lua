@@ -19,7 +19,7 @@ vim.opt.showmode = false -- mode is shown via lualine
 vim.cmd [[ set listchars=tab:▸\ ,eol:¬,trail:· ]] -- set visible chars for invisible white spaces
 vim.cmd [[ highlight TrailingWhitespace ctermbg=red guibg=red]] -- create new highlight group for trail spaces
 
-vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme tokyonight-moon]]
 
 vim.cmd [[
 		let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
