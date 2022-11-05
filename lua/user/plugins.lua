@@ -110,6 +110,10 @@ return packer.startup(function(use)
 
   -- keybindings helpers
   use "folke/which-key.nvim";
+
+  -- highlight word under cursor and its matches
+  use 'echasnovski/mini.cursorword'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
