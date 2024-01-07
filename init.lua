@@ -19,4 +19,3 @@ vim.g.mapleader = " "
 require("lazy").setup("plugins")
 require("settings")
 require("mappings")
-
