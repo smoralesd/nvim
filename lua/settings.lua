@@ -13,3 +13,5 @@ vim.opt.wrap = false -- disable line wrapping
 vim.opt.showmode = false -- mode is shown via lualine
 
 vim.opt.splitbelow = true -- split a new window below/to the right by default
+
+vim.opt.signcolumn = "yes" -- always show the signcolumn
