@@ -14,3 +14,5 @@ keymap("n", "<c-Left>", "<C-w>h", { noremap = true, silent = true, desc = "Move 
 keymap("n", "<c-Down>", "<C-w>j", { noremap = true, silent = true, desc = "Move to the window Below" })
 keymap("n", "<c-Up>", "<C-w>k", { noremap = true, silent = true, desc = "Move to the window Above" })
 keymap("n", "<c-Right>", "<C-w>l", { noremap = true, silent = true, desc = "Move to the window on the Right" })
+
+keymap('n', '<c-s>', ":w<CR>", { noremap = true, silent = true, desc = "Save changes on the current buffer/file" })
