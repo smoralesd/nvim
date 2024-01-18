@@ -15,3 +15,6 @@ vim.opt.showmode = false      -- mode is shown via lualine
 vim.opt.splitbelow = true     -- split a new window below/to the right by default
 
 vim.opt.signcolumn = "yes"    -- always show the signcolumn
+
+vim.opt.ignorecase = true     -- ignore case while searching
+vim.opt.smartcase = true      -- allows to override ignorecase by using upper case characters while searching
