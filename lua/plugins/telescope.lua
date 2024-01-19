@@ -48,6 +48,8 @@ return {
           buffers = { path_display = filenameFirst, },
           live_grep = { path_display = filenameFirst, },
           oldfiles = { path_display = filenameFirst, },
+          lsp_references = { path_display = filenameFirst, },
+          lsp_definitions = { path_display = filenameFirst, },
         },
       })
     end,
