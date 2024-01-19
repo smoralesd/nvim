@@ -14,4 +14,9 @@ return {
 		version = "0.11.0",
 		opts = {},
 	},
+  {
+    'echasnovski/mini.pairs',
+    version = "0.11.0",
+    opts = {},
+  },
 }
