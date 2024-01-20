@@ -23,7 +23,9 @@ return {
       local function filenameFirst(_, path)
         local tail = vim.fs.basename(path)
         local parent = vim.fs.dirname(path)
-        if parent == "." then return tail end
+        if parent == "." then
+          return tail
+        end
         return string.format("%s\t\t%s", tail, parent)
       end
 
@@ -40,16 +42,16 @@ return {
       require("telescope").setup({
         defaults = {
           layout_strategy = "horizontal",
-          layout_config = { width = 0.75 }
+          layout_config = { width = 0.75 },
         },
         pickers = {
-          git_status = { path_display = filenameFirst, },
-          find_files = { path_display = filenameFirst, },
-          buffers = { path_display = filenameFirst, },
-          live_grep = { path_display = filenameFirst, },
-          oldfiles = { path_display = filenameFirst, },
-          lsp_references = { path_display = filenameFirst, },
-          lsp_definitions = { path_display = filenameFirst, },
+          git_status = { path_display = filenameFirst },
+          find_files = { path_display = filenameFirst },
+          buffers = { path_display = filenameFirst },
+          live_grep = { path_display = filenameFirst },
+          oldfiles = { path_display = filenameFirst },
+          lsp_references = { path_display = filenameFirst },
+          lsp_definitions = { path_display = filenameFirst },
         },
       })
     end,

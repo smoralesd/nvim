@@ -1,11 +1,11 @@
 return {
-  'akinsho/toggleterm.nvim',
-	event = "VeryLazy",
+  "akinsho/toggleterm.nvim",
+  event = "VeryLazy",
   version = "*",
-  config = function ()
+  config = function()
     require("toggleterm").setup({})
 
-    local Terminal = require('toggleterm.terminal').Terminal
+    local Terminal = require("toggleterm.terminal").Terminal
     local lazygit = Terminal:new({
       cmd = "lazygit",
       dir = "git_dir",
@@ -13,7 +13,7 @@ return {
       float_opts = {
         border = "curved",
       },
-      hidden = true
+      hidden = true,
     })
 
     ---@diagnostic disable-next-line: lowercase-global
@@ -21,6 +21,11 @@ return {
       lazygit:toggle()
     end
 
-    vim.api.nvim_set_keymap("n", "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true, desc = "Terminal: open lazygit" })
-  end
+    vim.api.nvim_set_keymap(
+      "n",
+      "<leader>tg",
+      "<cmd>lua _lazygit_toggle()<CR>",
+      { noremap = true, silent = true, desc = "Terminal: open lazygit" }
+    )
+  end,
 }
