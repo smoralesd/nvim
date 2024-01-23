@@ -1,6 +1,6 @@
 function _G.set_terminal_keymaps()
   local opts = { buffer = 0 }
-  vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], { buffer = 0, desc = "Terminal: switch to normal mode" })
+  -- vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], { buffer = 0, desc = "Terminal: switch to normal mode" })
 
   vim.keymap.set("t", "<C-Left>", [[<Cmd>wincmd h<CR>]], opts)
   vim.keymap.set("t", "<C-Down>", [[<Cmd>wincmd j<CR>]], opts)
