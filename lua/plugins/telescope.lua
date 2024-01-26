@@ -3,7 +3,14 @@ return {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
     -- or                              , branch = '0.1.x',
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+        enabled = vim.fn.executable("make") == 1,
+      },
+    },
     config = function()
       local builtin = require("telescope.builtin")
 
@@ -53,6 +60,14 @@ return {
           lsp_references = { path_display = filenameFirst },
           lsp_definitions = { path_display = filenameFirst },
         },
+        extensions = {
+          fzf = {
+            fuzzy = true,             -- false will only do exact matching
+            override_generic_sorter = true,
+            override_file_sorter = true,
+            case_mode = "smart_case", -- or "ignore_case" or "respect_case"; the default case_mode is "smart_case"
+          }
+        }
       })
     end,
   },
