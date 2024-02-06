@@ -4,4 +4,10 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
   },
+
+  -- icons
+  { "nvim-tree/nvim-web-devicons", lazy = true },
+
+  -- ui components
+  { "MunifTanjim/nui.nvim", lazy = true },
 }
