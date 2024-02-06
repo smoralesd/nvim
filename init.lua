@@ -1,3 +1,2 @@
-require("config.options")
+require("user")
 
-vim.cmd.colorscheme("habamax")
