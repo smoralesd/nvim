@@ -7,6 +7,8 @@ return {
       plugins = { spelling = true },
       defaults = {
         mode = { "n", "v" },
+        ["g"] = { name = "+goto" },
+        ["s"] = { name = "+surround" },
         ["]"] = { name = "+next" },
         ["["] = { name = "+prev" },
         ["<leader>b"] = { name = "+buffer" },
