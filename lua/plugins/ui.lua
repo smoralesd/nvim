@@ -13,6 +13,7 @@ return {
         ["<leader>f"] = { name = "+file/find" },
         ["<leader>g"] = { name = "+git" },
         ["<leader>gh"] = { name = "+hunks" },
+        ["<leader>s"] = { name = "+search" },
       },
     },
     config = function(_, opts)
