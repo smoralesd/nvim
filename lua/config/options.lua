@@ -34,7 +34,7 @@ opt.relativenumber = true -- Relative line numbers
 -- opt.shiftwidth = 2 -- Size of an indent
 -- opt.shortmess:append({ W = true, I = true, c = true, C = true })
 opt.shortmess:append({ w = true })
--- opt.showmode = false -- Dont show mode since we have a statusline
+opt.showmode = false -- lualine shows the mode
 -- opt.sidescrolloff = 8 -- Columns of context
 opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
 opt.smartcase = true -- Don't ignore case with capitals
