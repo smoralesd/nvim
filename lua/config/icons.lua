@@ -40,6 +40,11 @@ local M = {
     Value         = " ",
     Variable      = "󰀫 "
   },
+  git = {
+    added    = " ",
+    modified = " ",
+    removed  = " ",
+  },
 }
 
 return M
