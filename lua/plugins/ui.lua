@@ -12,16 +12,16 @@ return {
           globalstatus = true,
         },
         sections = {
-          lualine_a = {'mode'},
+          lualine_a = { "mode" },
           lualine_b = {
-            { 'branch' },
-            { 'diagnostics' }
+            { "branch" },
+            { "diagnostics" },
           },
-          lualine_c = {'filename'},
+          lualine_c = { "filename" },
           lualine_x = {
-            'filetype',
+            "filetype",
             {
-              'diff',
+              "diff",
               symbols = {
                 added = icons.added,
                 modified = icons.modified,
@@ -41,16 +41,16 @@ return {
             },
           },
           lualine_y = {
-            { 'progress', separator = " ", padding = { left = 1 , right = 0 } },
-            { 'location', padding = { left = 0, right = 1 } },
+            { "progress", separator = " ", padding = { left = 1, right = 0 } },
+            { "location", padding = { left = 0, right = 1 } },
           },
           lualine_z = {
-            function ()
+            function()
               return " " .. os.date("%R")
-            end
+            end,
           },
         },
-        extensions = { "neo-tree", "lazy" }
+        extensions = { "neo-tree", "lazy" },
       }
     end,
   },

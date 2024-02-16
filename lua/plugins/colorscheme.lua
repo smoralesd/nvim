@@ -6,7 +6,7 @@ return {
     require("tokyonight").setup({
       on_highlights = function(hl, c)
         hl.CursorLineNr = { fg = c.orange }
-      end
+      end,
     })
 
     vim.cmd.colorscheme("tokyonight-moon")
