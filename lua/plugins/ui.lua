@@ -4,7 +4,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
-      local icons = require("config.icons").git
+      local icons = require("icons").git
 
       return {
         options = {
