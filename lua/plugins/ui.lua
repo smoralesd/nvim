@@ -81,6 +81,7 @@ return {
         ["<leader>g"] = { name = "+git" },
         ["<leader>gh"] = { name = "+hunks" },
         ["<leader>s"] = { name = "+search" },
+        ["<leader>u"] = { name = "+ui" },
       },
     },
     config = function(_, opts)
