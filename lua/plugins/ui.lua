@@ -4,7 +4,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
-      local icons = require("icons").git
+      local icons = require("icons")
 
       return {
         options = {
@@ -15,7 +15,15 @@ return {
           lualine_a = { "mode" },
           lualine_b = {
             { "branch" },
-            { "diagnostics" },
+            {
+              "diagnostics",
+              symbols = {
+                error = icons.diagnostics.Error,
+                warn = icons.diagnostics.Warn,
+                info = icons.diagnostics.Info,
+                hint = icons.diagnostics.Hint,
+              },
+            },
           },
           lualine_c = { "filename" },
           lualine_x = {
@@ -23,9 +31,9 @@ return {
             {
               "diff",
               symbols = {
-                added = icons.added,
-                modified = icons.modified,
-                removed = icons.removed,
+                added = icons.git.added,
+                modified = icons.git.modified,
+                removed = icons.git.removed,
               },
               source = function()
                 local gitsigns = vim.b.gitsigns_status_dict
