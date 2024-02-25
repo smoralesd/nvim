@@ -31,7 +31,7 @@ opt.relativenumber = true -- Relative line numbers
 -- opt.scrolloff = 4 -- Lines of context
 -- opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 -- opt.shiftround = true -- Round indent
--- opt.shiftwidth = 2 -- Size of an indent
+opt.shiftwidth = 2 -- Size of an indent
 -- opt.shortmess:append({ W = true, I = true, c = true, C = true })
 opt.shortmess:append({ w = true })
 opt.showmode = false -- lualine shows the mode
@@ -43,7 +43,7 @@ opt.spelllang = { "en" }
 opt.splitbelow = true -- Put new windows below current
 -- opt.splitkeep = "screen"
 opt.splitright = true -- Put new windows right of current
--- opt.tabstop = 2 -- Number of spaces tabs count for
+opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
 opt.timeoutlen = 300
 -- opt.undofile = true
