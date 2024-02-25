@@ -140,6 +140,7 @@ return {
         ["<leader>gh"] = { name = "+hunks" },
         ["<leader>s"] = { name = "+search" },
         ["<leader>u"] = { name = "+ui" },
+        ["<leader>x"] = { name = "+diagnostics" },
       },
     },
     config = function(_, opts)
