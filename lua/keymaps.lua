@@ -6,5 +6,5 @@ map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
 -- lazygit
 map("n", "<leader>gg", function()
-  terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false })
+  terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false, border = "rounded" })
 end, { desc = "Lazygit" })
