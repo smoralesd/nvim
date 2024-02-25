@@ -21,6 +21,7 @@ return {
       integrations = {
         cmp = true,
         gitsigns = true,
+        indent_blankline = { enabled = true },
         mason = true,
         mini = true,
         native_lsp = {
