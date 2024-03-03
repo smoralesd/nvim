@@ -161,7 +161,7 @@ return {
         },
         ["<leader>s"] = { name = "+search" },
         ["<leader>u"] = { name = "+ui" },
-        ["<leader>x"] = { name = "+diagnostics" },
+        ["<leader>x"] = { name = "+diagnostics/quickfix" },
       },
     },
     config = function(_, opts)
