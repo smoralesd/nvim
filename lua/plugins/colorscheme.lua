@@ -20,6 +20,7 @@ return {
     opts = {
       integrations = {
         cmp = true,
+        dashboard = true,
         gitsigns = true,
         indent_blankline = { enabled = true },
         lsp_trouble = true,

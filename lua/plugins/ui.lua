@@ -28,6 +28,7 @@ return {
         options = {
           theme = "tokyonight",
           globalstatus = true,
+          disabled_filetypes = { statusline = { "dashboard" } },
         },
         sections = {
           lualine_a = { "mode" },
