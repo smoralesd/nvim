@@ -114,7 +114,7 @@ return {
   -- hunks in a commit.
   {
     "lewis6991/gitsigns.nvim",
-    event = "VeryLazy",
+    event = "LazyFile",
     opts = {
       signs = {
         add = { text = "▎" },
@@ -156,7 +156,7 @@ return {
   -- instances.
   {
     "RRethy/vim-illuminate",
-    event = "VeryLazy",
+    event = "LazyFile",
     keys = {
       { "]]", desc = "Next Reference" },
       { "[[", desc = "Prev Reference" },
@@ -206,4 +206,3 @@ return {
     },
   },
 }
-

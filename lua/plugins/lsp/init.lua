@@ -5,6 +5,7 @@ local servers = require("plugins.lsp.servers")
 return {
   {
     "neovim/nvim-lspconfig",
+    event = "LazyFile",
     dependencies = {
       { "folke/neodev.nvim", opts = {} },
       "williamboman/mason.nvim",
