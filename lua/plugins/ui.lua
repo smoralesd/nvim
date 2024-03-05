@@ -17,6 +17,13 @@ return {
     end,
   },
 
+  -- Extensible UI for Neovim notifications and LSP progress messages.
+  {
+    "j-hui/fidget.nvim",
+    event = "LazyFile",
+    opts = {},
+  },
+
   -- statusline
   {
     "nvim-lualine/lualine.nvim",
