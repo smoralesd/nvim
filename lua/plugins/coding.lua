@@ -1,5 +1,14 @@
 return {
 
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    },
+  },
   -- auto completion
   {
     "hrsh7th/nvim-cmp",
@@ -9,6 +18,7 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+      { "zbirenbaum/copilot-cmp", dependencies = { "copilot.lua" }, opts = {} },
     },
     opts = function()
       vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
@@ -37,6 +47,7 @@ return {
           end,
         }),
         sources = cmp.config.sources({
+          { name = "copilot" },
           { name = "nvim_lsp" },
           { name = "path" },
         }, {
