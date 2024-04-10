@@ -7,6 +7,16 @@ return {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
     dependencies = {
+      {
+        "folke/neoconf.nvim",
+        cmd = "Neoconf",
+        opts = {
+          vscode = false,
+          coc = false,
+          nlsp = false,
+        },
+        dependencies = { "nvim-lspconfig" },
+      },
       { "folke/neodev.nvim", opts = {} },
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
