@@ -52,7 +52,7 @@ return {
 
   eslint = {
     settings = {
-      workingDirectories = { mode = "auto" },
+      workingDirectory = { mode = "auto" },
     },
     on_attach = function(_, bufnr)
       vim.api.nvim_create_autocmd("BufWritePre", {

@@ -11,9 +11,11 @@ return {
         "folke/neoconf.nvim",
         cmd = "Neoconf",
         opts = {
-          vscode = false,
-          coc = false,
-          nlsp = false,
+          import = {
+            vscode = false,
+            coc = false,
+            nlsp = false,
+          },
         },
         dependencies = { "nvim-lspconfig" },
       },
