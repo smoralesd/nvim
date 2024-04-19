@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+properties:
+  configurationVersion: "0.2.0"
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: LazyGit
+      directives:
+        description: Install LazyGit
+        allowPrerelease: true
+      settings:
+        id: JesseDuffield.lazygit
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: NVM
+      directives:
+        description: Install NVM for Windows
+        allowPrerelease: true
+      settings:
+        id: CoreyButler.NVMforWindows
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: RigGrep
+      directives:
+        description: Install RipGrep
+        allowPrerelease: true
+      settings:
+        id: BurntSushi.ripgrep.MSVC
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: FD
+      directives:
+        description: Install FD
+        allowPrerelease: true
+      settings:
+        id: sharkdp.fd
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Glow
+      directives:
+        description: Install Glow
+        allowPrerelease: true
+      settings:
+        id: charmbracelet.glow
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: wget
+      directives:
+        description: Install wget
+        allowPrerelease: true
+      settings:
+        id: JernejSimoncic.Wget
+        source: winget
