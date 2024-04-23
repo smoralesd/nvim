@@ -56,3 +56,12 @@ properties:
       settings:
         id: JernejSimoncic.Wget
         source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: CMake
+      directives:
+        description: Install Cmake
+        allowPrerelease: true
+      settings:
+        id: Kitware.CMake
+        source: winget
