@@ -65,3 +65,12 @@ properties:
       settings:
         id: Kitware.CMake
         source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: LLVM
+      directives:
+        description: Install LLVM (clang)
+        allowPrerelease: true
+      settings:
+        id: LLVM.LLVM
+        source: winget
