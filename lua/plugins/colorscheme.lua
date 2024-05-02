@@ -10,6 +10,8 @@ return {
           hl.CursorLineNr = { fg = c.orange }
         end,
       })
+
+      vim.cmd.colorscheme("tokyonight-storm")
     end,
   },
 
@@ -51,7 +53,17 @@ return {
         end,
       })
 
-      vim.cmd.colorscheme("catppuccin-mocha")
+      -- vim.cmd.colorscheme("catppuccin-mocha")
+    end,
+  },
+
+  -- kanagawa
+  {
+    "rebelot/kanagawa.nvim",
+    config = function()
+      require("kanagawa").setup()
+
+      -- vim.cmd.colorscheme("kanagawa")
     end,
   },
 }
