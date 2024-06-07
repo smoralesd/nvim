@@ -11,11 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
-vim.opt.rtp:prepend(lazypath)
+local opt = vim.opt
+
+opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
+opt.clipboard = "unnamedplus" -- Sync with system clipboard
+
 require("lazy").setup({
-  { "echasnovski/mini.surround", version = "*" , opts={} },
-  { "echasnovski/mini.pairs", version = "*", opts={} },
+  { "echasnovski/mini.surround", version = "*", opts = {} },
+  { "echasnovski/mini.pairs", version = "*", opts = {} },
 })
