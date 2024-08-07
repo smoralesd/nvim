@@ -188,7 +188,6 @@ return {
         { "s", group = "surround" },
         { "]", group = "next" },
         { "[", group = "prev" },
-        { "<leader>b", group = "buffer" },
         { "<leader>c", group = "code" },
         { "<leader>f", group = "file/find" },
         { "<leader>g", group = "git" },
@@ -197,6 +196,13 @@ return {
         { "<leader>s", group = "search" },
         { "<leader>u", group = "ui" },
         { "<leader>x", group = "diagnostics/quickfix" },
+        {
+          "<leader>b",
+          group = "buffer",
+          expand = function()
+            return require("which-key.extras").expand.buf()
+          end,
+        },
       },
     },
   },
