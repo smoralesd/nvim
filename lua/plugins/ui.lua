@@ -27,11 +27,6 @@ return {
   -- Component for lualine with the purpose of recieving and previewing status
   {
     "AndreM222/copilot-lualine",
-    -- dependencies = { "nvim-lualine/lualine.nvim" },
-    -- opts = { show_colors = true },
-    -- config = function(_, opts)
-    --   require("copilot-lualine").setup(opts)
-    -- end,
   },
 
   -- statusline
