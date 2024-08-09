@@ -107,9 +107,6 @@ return {
     end,
   },
 
-  -- Preview markdown code directly in your neovim terminal
-  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
-
   -- indent guides for Neovim
   {
     "lukas-reineke/indent-blankline.nvim",
