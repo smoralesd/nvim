@@ -76,13 +76,32 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     version = false, -- telescope did only one release, so use HEAD for now
-    opts = {
-      defaults = {
-        path_display = {
-          "filename_first",
+    opts = function()
+      local action_layout = require("telescope.actions.layout")
+
+      return {
+        defaults = {
+          layout_config = {
+            horizontal = { prompt_position = "top" },
+          },
+          mappings = {
+            n = {
+              ["<M-p>"] = action_layout.toggle_preview,
+            },
+            i = {
+              ["<M-p>"] = action_layout.toggle_preview,
+            },
+          },
+          path_display = {
+            "filename_first",
+          },
+          preview = {
+            hide_on_startup = true,
+          },
+          sorting_strategy = "ascending",
         },
-      },
-    },
+      }
+    end,
     dependencies = {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
