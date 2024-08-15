@@ -59,7 +59,6 @@ return {
           { name = "copilot" },
           { name = "nvim_lsp" },
           { name = "path" },
-        }, {
           { name = "buffer" },
         }),
         formatting = {
@@ -72,6 +71,10 @@ return {
 
             return item
           end,
+        },
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
         },
         experimental = {
           ghost_text = {
