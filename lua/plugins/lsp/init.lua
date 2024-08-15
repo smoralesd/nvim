@@ -19,7 +19,6 @@ return {
         },
         dependencies = { "nvim-lspconfig" },
       },
-      { "folke/neodev.nvim", opts = {} },
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
     },

@@ -9,6 +9,14 @@ return {
       panel = { enabled = false },
     },
   },
+  -- configure LuaLS for editing Neovim config files
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    cmd = "LazyDev",
+    -- needs to have opts (even if empty) for `vim` to get recognized
+    opts = {},
+  },
   -- auto completion
   {
     "hrsh7th/nvim-cmp",
@@ -47,6 +55,7 @@ return {
           end,
         }),
         sources = cmp.config.sources({
+          { name = "lazydev" },
           { name = "copilot" },
           { name = "nvim_lsp" },
           { name = "path" },
