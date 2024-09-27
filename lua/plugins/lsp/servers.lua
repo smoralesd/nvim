@@ -14,7 +14,7 @@ return {
 
   marksman = {},
 
-  tsserver = {
+  ts_ls = {
     keys = {
       {
         "<leader>co",
