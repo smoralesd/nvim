@@ -82,7 +82,7 @@ return {
       return {
         defaults = {
           layout_config = {
-            horizontal = { prompt_position = "top" },
+            horizontal = { prompt_position = "top", preview_width = 0.6 },
           },
           mappings = {
             n = {
@@ -94,6 +94,7 @@ return {
           },
           path_display = {
             "filename_first",
+            "smart",
           },
           preview = {
             hide_on_startup = true,
