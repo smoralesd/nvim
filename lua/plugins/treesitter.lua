@@ -25,6 +25,7 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
       ensure_installed = {
+        "c_sharp",
         "diff",
         "html",
         "javascript",

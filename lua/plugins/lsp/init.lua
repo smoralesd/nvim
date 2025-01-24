@@ -122,4 +122,5 @@ return {
       end
     end,
   },
+  { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true },
 }
