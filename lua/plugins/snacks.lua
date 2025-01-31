@@ -6,6 +6,7 @@ return {
     ---@type snacks.Config
     opts = {
       git = { enabled = true },
+      scroll = { enabled = true },
     },
     keys = {
       {
