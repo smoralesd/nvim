@@ -7,6 +7,7 @@ return {
     opts = {
       git = { enabled = true },
       indent = { enabled = true },
+      input = { enabled = true },
       scroll = { enabled = true },
     },
     keys = {
