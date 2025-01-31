@@ -56,7 +56,9 @@ return {
               },
             },
           },
-          lualine_c = { "filename" },
+          lualine_c = {
+            { "filename", path = 1, shorting_target = 30 },
+          },
           lualine_x = {
             "filetype",
             {
