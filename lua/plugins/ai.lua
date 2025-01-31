@@ -31,6 +31,9 @@ return {
       return {
         question_header = "  Sebastian ",
         answer_header = "  Copilot ",
+        window = {
+          width = 0.4,
+        },
       }
     end,
     keys = {
