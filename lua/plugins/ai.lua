@@ -1,10 +1,9 @@
 local M = {}
 
----@param kind string
-function M.pick(kind)
+function M.pick_prompts()
   return function()
     local actions = require("CopilotChat.actions")
-    local items = actions[kind .. "_actions"]()
+    local items = actions.prompt_actions()
     if not items then
       return
     end
@@ -28,6 +27,12 @@ return {
       { "zbirenbaum/copilot.lua" },
       { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
     },
+    opts = function()
+      return {
+        question_header = "  Sebastian ",
+        answer_header = "  Copilot ",
+      }
+    end,
     keys = {
       { "<c-s>", "<CR>", ft = "copilot-chat", desc = "Submit Prompt", remap = true },
       { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
@@ -59,7 +64,7 @@ return {
         mode = { "n", "v" },
       },
       -- Show prompts actions with telescope
-      { "<leader>ap", M.pick("prompt"), desc = "Prompt Actions (CopilotChat)", mode = { "n", "v" } },
+      { "<leader>ap", M.pick_prompts(), desc = "Prompt Actions (CopilotChat)", mode = { "n", "v" } },
     },
     config = function(_, opts)
       local chat = require("CopilotChat")
