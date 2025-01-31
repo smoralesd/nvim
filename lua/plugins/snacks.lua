@@ -6,6 +6,7 @@ return {
     ---@type snacks.Config
     opts = {
       git = { enabled = true },
+      indent = { enabled = true },
       scroll = { enabled = true },
     },
     keys = {
@@ -27,6 +28,7 @@ return {
           Snacks.toggle.diagnostics():map("<leader>ud")
           Snacks.toggle.line_number():map("<leader>ul")
           Snacks.toggle.treesitter():map("<leader>uT")
+          Snacks.toggle.indent():map("<leader>ug")
         end,
       })
     end,
