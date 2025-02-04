@@ -30,6 +30,21 @@ return {
           Snacks.toggle.line_number():map("<leader>ul")
           Snacks.toggle.treesitter():map("<leader>uT")
           Snacks.toggle.indent():map("<leader>ug")
+
+          Snacks.toggle({
+            name = "Render Markdown",
+            get = function()
+              return require("render-markdown.state").enabled
+            end,
+            set = function(enabled)
+              local m = require("render-markdown")
+              if enabled then
+                m.enable()
+              else
+                m.disable()
+              end
+            end,
+          }):map("<leader>um")
         end,
       })
     end,
