@@ -73,6 +73,14 @@ return {
         },
       },
       git = { enabled = true },
+      gitbrowse = {
+        enabled = true,
+        url_patterns = {
+          ["dev.azure.com"] = {
+            file = "?path={file}&version=GC{branch}",
+          },
+        },
+      },
       indent = { enabled = true },
       input = { enabled = true },
       scroll = { enabled = true },
