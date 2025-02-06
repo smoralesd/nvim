@@ -1,5 +1,3 @@
-local terminal = require("util.terminal")
-
 local map = vim.keymap.set
 
 -- lazy
@@ -61,7 +59,11 @@ map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 
 -- lazygit
 -- stylua: ignore
-map("n", "<leader>gg", function() terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false, border = "rounded" }) end, { desc = "Lazygit" })
+map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
+-- stylua: ignore
+map("n", "<leader>gf", function() Snacks.picker.git_log_file() end, { desc = "Git Current File History" })
+-- stylua: ignore
+map("n", "<leader>gL", function() Snacks.picker.git_log() end, { desc = "Git Log" })
 
 -- quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
@@ -70,9 +72,8 @@ map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
 map("n", "<leader>uI", "<cmd>InspectTree<cr>", { desc = "Inspect Tree" })
 
-map({ "n", "x" }, "<leader>gB", function()
-  Snacks.gitbrowse()
-end, { desc = "Git Browse (open)" })
+-- stylua: ignore
+map({ "n", "x" }, "<leader>gB", function() Snacks.gitbrowse() end, { desc = "Git Browse (open)" })
 map({ "n", "x" }, "<leader>gY", function()
   Snacks.gitbrowse({
     open = function(url)
