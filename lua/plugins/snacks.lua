@@ -85,6 +85,11 @@ return {
       input = { enabled = true },
       lazygit = {
         enabled = true,
+        config = {
+          git = {
+            autoFetch = false,
+          },
+        },
       },
       scroll = { enabled = true },
     },
