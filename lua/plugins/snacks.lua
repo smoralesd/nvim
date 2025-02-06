@@ -83,6 +83,9 @@ return {
       },
       indent = { enabled = true },
       input = { enabled = true },
+      lazygit = {
+        enabled = true,
+      },
       scroll = { enabled = true },
     },
     keys = {
