@@ -28,6 +28,7 @@ return {
         "c_sharp",
         "diff",
         "html",
+        "http",
         "javascript",
         "jsdoc",
         "json",
