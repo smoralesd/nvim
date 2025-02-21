@@ -7,7 +7,8 @@ function M.pick_prompts()
     if not items then
       return
     end
-    require("CopilotChat.integrations.telescope").pick(items)
+    -- require("CopilotChat.integrations.telescope").pick(items)
+    require("CopilotChat.integrations.snacks").pick(items)
   end
 end
 
@@ -66,7 +67,7 @@ return {
         desc = "Quick Chat (CopilotChat)",
         mode = { "n", "v" },
       },
-      -- Show prompts actions with telescope
+      -- Show prompts actions with a picker
       { "<leader>ap", M.pick_prompts(), desc = "Prompt Actions (CopilotChat)", mode = { "n", "v" } },
     },
     config = function(_, opts)

@@ -12,32 +12,19 @@ function M.get()
     return M._keys
   end
 
+  -- stylua: ignore
   M._keys = {
     { "<leader>cl", "<cmd>LspInfo<cr>", desc = "Lsp Info" },
-    {
-      "gd",
-      function()
-        require("telescope.builtin").lsp_definitions({ reuse_win = true })
-      end,
-      desc = "Goto Definition",
-      has = "definition",
-    },
-    { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
-    { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
-    {
-      "gI",
-      function()
-        require("telescope.builtin").lsp_implementations({ reuse_win = true })
-      end,
-      desc = "Goto Implementation",
-    },
-    {
-      "gy",
-      function()
-        require("telescope.builtin").lsp_type_definitions({ reuse_win = true })
-      end,
-      desc = "Goto T[y]pe Definition",
-    },
+    -- { "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end, desc = "Goto Definition", has = "definition", },
+    { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
+    -- { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
+    { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
+    -- { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
+    { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
+    -- { "gI", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, desc = "Goto Implementation", },
+    { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
+    -- { "gy", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition", },
+    { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
     { "K", vim.lsp.buf.hover, desc = "Hover" },
     { "gK", vim.lsp.buf.signature_help, desc = "Signature Help", has = "signatureHelp" },
     { "<c-k>", vim.lsp.buf.signature_help, mode = "i", desc = "Signature Help", has = "signatureHelp" },
