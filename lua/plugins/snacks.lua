@@ -148,7 +148,7 @@ return {
       { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
       { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
 
-      { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line", },
+      { "<leader>gb", function() Snacks.git.git_log_line() end, desc = "Git Blame Line", },
     },
     init = function()
       vim.api.nvim_create_autocmd("User", {
