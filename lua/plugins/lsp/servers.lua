@@ -131,7 +131,7 @@ return {
       {
         "gd",
         function()
-          require("omnisharp_extended").telescope_lsp_definitions()
+          require("omnisharp_extended").lsp_definitions()
         end,
         desc = "Goto Definition",
       },
