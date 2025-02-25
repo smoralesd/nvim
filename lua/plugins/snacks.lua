@@ -91,7 +91,10 @@ return {
           },
         },
       },
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        formatters = { file = { filename_first = true } },
+      },
       scroll = { enabled = true },
       words = { enabled = true },
     },
