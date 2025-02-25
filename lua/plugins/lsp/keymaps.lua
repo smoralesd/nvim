@@ -45,6 +45,8 @@ function M.get()
       has = "codeAction",
     },
     { "<leader>cr", vim.lsp.buf.rename, desc = "Rename", has = "rename" },
+    { "]]", function() Snacks.words.jump(vim.v.count1) end, has = "documentHighlight", desc = "Next Reference" },
+    { "[[", function() Snacks.words.jump(-vim.v.count1) end, has = "documentHighlight", desc = "Prev Reference"},
   }
 
   return M._keys

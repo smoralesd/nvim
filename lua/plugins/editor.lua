@@ -177,6 +177,7 @@ return {
   {
     "RRethy/vim-illuminate",
     event = "LazyFile",
+    enabled = false,
     keys = {
       { "]]", desc = "Next Reference" },
       { "[[", desc = "Prev Reference" },

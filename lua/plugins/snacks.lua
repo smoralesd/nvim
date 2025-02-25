@@ -93,6 +93,7 @@ return {
       },
       picker = { enabled = true },
       scroll = { enabled = true },
+      words = { enabled = true },
     },
     -- stylua: ignore
     keys = {
