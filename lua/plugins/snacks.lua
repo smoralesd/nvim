@@ -109,10 +109,10 @@ return {
       { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
       { "<leader>fr", function() Snacks.picker.recent({ filter = { cwd = true } }) end, desc = "Recent" },
       -- git
-      { "<leader>gb", function() Snacks.git.git_log_line() end, desc = "Git Blame Line", },
       { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
       { "<leader>gg", function() Snacks.lazygit() end,  desc = "Lazygit" },
-      { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
+      { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Current File History" },
+      { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
       -- Grep
       { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
       { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
