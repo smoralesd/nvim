@@ -34,6 +34,7 @@ return {
         "json",
         "json5",
         "jsonc",
+        "kusto",
         "lua",
         "luadoc",
         "luap",
