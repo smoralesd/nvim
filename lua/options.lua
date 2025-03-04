@@ -46,6 +46,7 @@ opt.spelllang = { "en" }
 opt.splitbelow = true -- Put new windows below current
 -- opt.splitkeep = "screen"
 opt.splitright = true -- Put new windows right of current
+opt.swapfile = false -- Disable swap file
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
 opt.timeoutlen = 300
