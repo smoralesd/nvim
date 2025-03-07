@@ -152,7 +152,7 @@ return {
     event = "VeryLazy",
     keys = {
       {
-        "<leader>gd",
+        "<leader>go",
         function()
           require("mini.diff").toggle_overlay(0)
         end,
