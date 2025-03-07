@@ -109,6 +109,7 @@ return {
       { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
       { "<leader>fr", function() Snacks.picker.recent({ filter = { cwd = true } }) end, desc = "Recent" },
       -- git
+      { "<leader>gb", function() Snacks.picker.git_log_line() end, desc = "Git Blame Line" },
       { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
       { "<leader>gg", function() Snacks.lazygit() end,  desc = "Lazygit" },
       { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Current File History" },
