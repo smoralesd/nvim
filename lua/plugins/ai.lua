@@ -7,7 +7,6 @@ function M.pick_prompts()
     if not items then
       return
     end
-    -- require("CopilotChat.integrations.telescope").pick(items)
     require("CopilotChat.integrations.snacks").pick(items)
   end
 end
