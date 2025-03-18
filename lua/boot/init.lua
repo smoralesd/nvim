@@ -24,3 +24,4 @@ require("lazy").setup({
 
 require("keymaps")
 require("autocmds")
+require("filetypes")
