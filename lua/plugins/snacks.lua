@@ -77,7 +77,7 @@ return {
         enabled = true,
         url_patterns = {
           ["dev.azure.com"] = {
-            file = "?path={file}&version=GC{branch}",
+            file = "?path={file}&version=GB{branch}",
           },
         },
       },
