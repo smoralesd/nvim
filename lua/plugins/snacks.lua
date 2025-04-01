@@ -72,6 +72,7 @@ return {
           { section = "startup" },
         },
       },
+      explorer = { enabled = true },
       git = { enabled = true },
       gitbrowse = {
         enabled = true,
@@ -94,6 +95,13 @@ return {
       picker = {
         enabled = true,
         formatters = { file = { filename_first = true } },
+        sources = {
+          explorer = {
+            layout = {
+              layout = { position = "right" },
+            },
+          },
+        },
       },
       scroll = { enabled = true },
       words = { enabled = true },
@@ -140,7 +148,8 @@ return {
       -- LSP
       { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
       { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
-
+      -- file explorer
+      { "<leader>fe", function() Snacks.explorer.open() end, desc = "File explorer" },
     },
     init = function()
       vim.api.nvim_create_autocmd("User", {
