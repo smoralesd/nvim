@@ -14,7 +14,7 @@ function M.get()
 
   -- stylua: ignore
   M._keys = {
-    { "<leader>cl", "<cmd>LspInfo<cr>", desc = "Lsp Info" },
+    { "<leader>cl", function() Snacks.picker.lsp_config() end, desc = "Lsp Info" },
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
     { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
     { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
