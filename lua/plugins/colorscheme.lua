@@ -31,6 +31,7 @@ return {
         gitsigns = true,
         lsp_trouble = true,
         mason = true,
+        markdown = true,
         mini = true,
         native_lsp = {
           enabled = true,
@@ -41,9 +42,8 @@ return {
             information = { "undercurl" },
           },
         },
-        neotree = true,
         semantic_tokens = true,
-        telescope = true,
+        snacks = true,
         treesitter = true,
         which_key = true,
       },
