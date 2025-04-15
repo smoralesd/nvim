@@ -9,6 +9,11 @@ return {
         on_highlights = function(hl, c)
           hl.CursorLineNr = { fg = c.orange }
         end,
+        styles = {
+          comments = {
+            italic = false,
+          },
+        },
       })
 
       vim.cmd.colorscheme("tokyonight-storm")
