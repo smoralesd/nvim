@@ -169,6 +169,12 @@ return {
     },
   },
 
+  -- Extend and create a/i textobjects
+  {
+    "echasnovski/mini.ai",
+    opts = {},
+  },
+
   -- auto pairs
   {
     "echasnovski/mini.pairs",
