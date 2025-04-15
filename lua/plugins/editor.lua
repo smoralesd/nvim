@@ -110,4 +110,10 @@ return {
       { "<leader>xQ", "<cmd>Trouble quickfix toggle<cr>", desc = "Quickfix List (Trouble)" },
     },
   },
+
+  -- Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+  },
 }
