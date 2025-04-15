@@ -30,6 +30,15 @@ return {
       -- global diagnostic config
       vim.diagnostic.config({
         underline = true,
+        float = { border = "rounded", source = "if_many" },
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
+            [vim.diagnostic.severity.WARN] = icons.diagnostics.Warn,
+            [vim.diagnostic.severity.INFO] = icons.diagnostics.Info,
+            [vim.diagnostic.severity.HINT] = icons.diagnostics.Hint,
+          },
+        },
         update_in_insert = false,
         virtual_text = {
           spacing = 4,
@@ -38,12 +47,6 @@ return {
         },
         severity_sort = true,
       })
-
-      -- set diagnostics signs
-      for name, icon in pairs(icons.diagnostics) do
-        name = "DiagnosticSign" .. name
-        vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
-      end
 
       -- setup keymaps
       UtilLsp.on_attach(function(client, buffer)
