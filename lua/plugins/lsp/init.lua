@@ -6,6 +6,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
+    version = "4ea9083b6d3dff4ddc6da17c51334c3255b7eba5",
     dependencies = {
       {
         "folke/neoconf.nvim",
