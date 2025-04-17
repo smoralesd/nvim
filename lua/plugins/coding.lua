@@ -64,27 +64,23 @@ return {
         sources = cmp.config.sources({
           {
             name = "lazydev",
-            priority = 5,
-            max_item_count = 4,
+            priority = 500,
           },
           {
             name = "nvim_lsp",
-            priority = 4,
-            max_item_count = 4,
+            priority = 400,
           },
           {
             name = "path",
-            priority = 3,
-            max_item_count = 3,
+            priority = 300,
           },
           {
             name = "buffer",
-            priority = 2,
-            max_item_count = 5,
+            priority = 200,
           },
           {
             name = "copilot",
-            priority = 1,
+            priority = 100,
             max_item_count = 2,
           },
         }),
