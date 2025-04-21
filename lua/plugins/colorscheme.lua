@@ -16,7 +16,7 @@ return {
         },
       })
 
-      vim.cmd.colorscheme("tokyonight-storm")
+      -- vim.cmd.colorscheme("tokyonight-storm")
     end,
   },
 
@@ -68,6 +68,16 @@ return {
       require("kanagawa").setup()
 
       -- vim.cmd.colorscheme("kanagawa")
+    end,
+  },
+
+  -- nightfox
+  {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup({})
+
+      vim.cmd.colorscheme("nightfox")
     end,
   },
 }
