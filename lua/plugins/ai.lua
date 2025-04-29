@@ -1,16 +1,3 @@
-local M = {}
-
-function M.pick_prompts()
-  return function()
-    local actions = require("CopilotChat.actions")
-    local items = actions.prompt_actions()
-    if not items then
-      return
-    end
-    require("CopilotChat.integrations.snacks").pick(items)
-  end
-end
-
 return {
   {
     "zbirenbaum/copilot.lua",
@@ -67,7 +54,14 @@ return {
         mode = { "n", "v" },
       },
       -- Show prompts actions with a picker
-      { "<leader>ap", M.pick_prompts(), desc = "Prompt Actions (CopilotChat)", mode = { "n", "v" } },
+      {
+        "<leader>ap",
+        function()
+          require("CopilotChat").select_prompt()
+        end,
+        desc = "Prompt Actions (CopilotChat)",
+        mode = { "n", "v" },
+      },
     },
     config = function(_, opts)
       local chat = require("CopilotChat")
