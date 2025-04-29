@@ -34,7 +34,7 @@ return {
     },
     event = "InsertEnter",
     -- use a release tag to download pre-built binaries
-    version = "*",
+    version = "1.1.1",
     -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
     -- build = 'cargo build --release',
     -- If you use nix, you can build from source using latest nightly rust with:
@@ -95,7 +95,7 @@ return {
       -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
       --
       -- See the fuzzy documentation for more information
-      fuzzy = { implementation = "lua" },
+      fuzzy = { implementation = "prefer_rust" },
     },
     opts_extend = {
       "sources.completion.enabled_providers",
