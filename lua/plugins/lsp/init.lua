@@ -127,8 +127,6 @@ return {
       end
     end,
   },
-  -- { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true },
-  --
   -- https://github.com/seblyng/roslyn.nvim
   -- Follow Installation > Manually steps
   -- After installing, make sure to use Mason to install (yes, again) roslyn
