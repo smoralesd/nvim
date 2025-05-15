@@ -12,8 +12,6 @@ return {
     },
   },
 
-  marksman = {},
-
   ts_ls = {
     keys = {
       {
