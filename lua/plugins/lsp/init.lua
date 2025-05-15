@@ -73,24 +73,32 @@ return {
       local have_mason, mlsp = pcall(require, "mason-lspconfig")
       local all_mslp_servers = {}
       if have_mason then
-        all_mslp_servers = vim.tbl_keys(require("mason-lspconfig.mappings.server").lspconfig_to_package)
+        all_mslp_servers = vim.tbl_keys(require("mason-lspconfig").get_mappings().lspconfig_to_package)
       end
 
       local ensure_installed = {} ---@type string[]
       for server, server_opts in pairs(servers) do
         if server_opts then
-          server_opts = server_opts == true and {} or server_opts
+          -- server_opts = server_opts == true and {} or server_opts
+          vim.notify("SEBAX server: " .. server)
           -- run manual setup if mason=false or if this is a server that cannot be installed with mason-lspconfig
-          if server_opts.mason == false or not vim.tbl_contains(all_mslp_servers, server) then
-            setup(server)
-          else
-            ensure_installed[#ensure_installed + 1] = server
-          end
+          -- if server_opts.mason == false or not vim.tbl_contains(all_mslp_servers, server) then
+          vim.notify("SEBAX manual setup for: " .. server)
+          setup(server)
+          -- else
+          -- ensure_installed[#ensure_installed + 1] = server
+          -- end
         end
       end
 
+      vim.notify("SEBAX ensure_installed: " .. vim.inspect(ensure_installed))
+
       if have_mason then
-        mlsp.setup({ ensure_installed = ensure_installed, handlers = { setup } })
+        mlsp.setup({
+          ensure_installed = ensure_installed,
+          handlers = { setup },
+          automatic_enable = true,
+        })
       end
     end,
   },
@@ -103,6 +111,13 @@ return {
         "stylua",
         "markdownlint",
         "marksman",
+      },
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
+        },
       },
     },
     config = function(_, opts)
