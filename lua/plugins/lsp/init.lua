@@ -69,29 +69,15 @@ return {
         require("lspconfig")[server].setup(server_opts)
       end
 
-      -- get all the servers that are available through mason-lspconfig
       local have_mason, mlsp = pcall(require, "mason-lspconfig")
-      local all_mslp_servers = {}
-      if have_mason then
-        all_mslp_servers = vim.tbl_keys(require("mason-lspconfig").get_mappings().lspconfig_to_package)
-      end
 
       local ensure_installed = {} ---@type string[]
       for server, server_opts in pairs(servers) do
         if server_opts then
-          -- server_opts = server_opts == true and {} or server_opts
-          vim.notify("SEBAX server: " .. server)
-          -- run manual setup if mason=false or if this is a server that cannot be installed with mason-lspconfig
-          -- if server_opts.mason == false or not vim.tbl_contains(all_mslp_servers, server) then
-          vim.notify("SEBAX manual setup for: " .. server)
+          -- run manual setup for server with custom settings
           setup(server)
-          -- else
-          -- ensure_installed[#ensure_installed + 1] = server
-          -- end
         end
       end
-
-      vim.notify("SEBAX ensure_installed: " .. vim.inspect(ensure_installed))
 
       if have_mason then
         mlsp.setup({
