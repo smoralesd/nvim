@@ -94,9 +94,14 @@ return {
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     opts = {
       ensure_installed = {
-        "stylua",
+        "json-lsp",
+        "lua-language-server",
         "markdownlint",
         "marksman",
+        "powershell-editor-services",
+        "roslyn",
+        "stylua",
+        "yaml-language-server",
       },
       ui = {
         icons = {
