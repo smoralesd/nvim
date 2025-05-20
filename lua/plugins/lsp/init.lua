@@ -20,8 +20,8 @@ return {
         },
         dependencies = { "nvim-lspconfig" },
       },
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
     },
     opts = {
       servers = servers,
@@ -89,7 +89,7 @@ return {
     end,
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     cmd = "Mason",
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     opts = {
