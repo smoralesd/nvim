@@ -46,4 +46,27 @@ return {
     "sindrets/diffview.nvim",
     cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
   },
+
+  -- Break bad habits, master Vim motions
+  -- By blocking some keys (or keys pressed repeatedly) in certain modes, and giving hints of better alternatives.
+  {
+    "m4xshen/hardtime.nvim",
+    name = "hardtime",
+    lazy = false,
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {
+      restricted_keys = {
+        ["<Up>"] = { "n", "x" },
+        ["<Down>"] = { "n", "x" },
+        ["<Left>"] = { "n", "x" },
+        ["<Right>"] = { "n", "x" },
+      },
+      disabled_keys = {
+        ["<Up>"] = false,
+        ["<Down>"] = false,
+        ["<Left>"] = false,
+        ["<Right>"] = false,
+      },
+    },
+  },
 }

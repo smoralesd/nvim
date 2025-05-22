@@ -176,6 +176,21 @@ return {
               end
             end,
           }):map("<leader>um")
+
+          Snacks.toggle({
+            name = "Hardtime",
+            get = function()
+              return require("hardtime").is_plugin_enabled
+            end,
+            set = function(enabled)
+              local h = require("hardtime")
+              if enabled then
+                h.enable()
+              else
+                h.disable()
+              end
+            end,
+          }):map("<leader>ch")
         end,
       })
     end,
