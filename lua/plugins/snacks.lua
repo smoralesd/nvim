@@ -104,6 +104,10 @@ return {
         },
       },
       scroll = { enabled = true },
+      terminal = {
+        enabled = true,
+        shell = "pwsh",
+      },
       words = { enabled = true },
     },
     -- stylua: ignore
@@ -149,6 +153,8 @@ return {
       { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
       -- file explorer
       { "<leader>fe", function() Snacks.explorer.open() end, desc = "File explorer" },
+      -- terminal
+      { "<leader>tt", function() Snacks.terminal() end, desc = "Toggle Terminal" }
     },
     init = function()
       vim.api.nvim_create_autocmd("User", {

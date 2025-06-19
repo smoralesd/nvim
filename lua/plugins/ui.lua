@@ -121,6 +121,7 @@ return {
         { "<leader>q", group = "quit" },
         { "<leader>gh", group = "hunks" },
         { "<leader>s", group = "search" },
+        { "<leader>t", group = "terminal" },
         { "<leader>u", group = "ui" },
         { "<leader>x", group = "diagnostics/quickfix" },
         {
