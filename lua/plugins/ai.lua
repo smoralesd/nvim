@@ -14,15 +14,15 @@ return {
       { "zbirenbaum/copilot.lua" },
       { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
     },
-    opts = function()
-      return {
-        question_header = "  Sebastian ",
-        answer_header = "  Copilot ",
-        window = {
-          width = 0.4,
-        },
-      }
-    end,
+    opts = {
+      headers = {
+        user = "  Sebastian  ",
+        assistant = "  Copilot  ",
+      },
+      window = {
+        width = 0.4,
+      },
+    },
     keys = {
       { "<c-s>", "<CR>", ft = "copilot-chat", desc = "Submit Prompt", remap = true },
       { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
