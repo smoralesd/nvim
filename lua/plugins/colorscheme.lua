@@ -16,7 +16,7 @@ return {
         },
       })
 
-      -- vim.cmd.colorscheme("tokyonight-storm")
+      vim.cmd.colorscheme("tokyonight-storm")
     end,
   },
 
@@ -77,7 +77,7 @@ return {
     config = function()
       require("nightfox").setup({})
 
-      vim.cmd.colorscheme("nightfox")
+      -- vim.cmd.colorscheme("nightfox")
     end,
   },
 }
