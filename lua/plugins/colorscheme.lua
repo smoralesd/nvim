@@ -50,6 +50,11 @@ return {
     },
     config = function()
       require("catppuccin").setup({
+        flavour = "macchiato",
+        float = {
+          transparent = false,
+          solid = false,
+        },
         custom_highlights = function(colors)
           return {
             CursorLineNr = { fg = colors.peach },
