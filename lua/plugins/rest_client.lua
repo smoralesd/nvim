@@ -1,6 +1,7 @@
 return {
   {
     "rest-nvim/rest.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     init = function()
       -- keys (from lazy.nvim) does not seem to work with rest.nvim
       -- using an auto command to create keymaps for the plugin

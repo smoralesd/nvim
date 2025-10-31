@@ -20,6 +20,7 @@ require("util.plugin").setup()
 require("lazy").setup({
   spec = { import = "plugins" },
   install = { colorscheme = { "tokyonight", "habamax" } },
+  rocks = { server = "https://lumen-oss.github.io/rocks-binaries/" },
 })
 
 require("keymaps")
