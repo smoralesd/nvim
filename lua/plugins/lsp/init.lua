@@ -101,6 +101,7 @@ return {
         "powershell-editor-services",
         "roslyn",
         "stylua",
+        "typescript-language-server",
         "yaml-language-server",
       },
       ui = {
