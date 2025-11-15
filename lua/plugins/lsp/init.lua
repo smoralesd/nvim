@@ -94,6 +94,7 @@ return {
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     opts = {
       ensure_installed = {
+        "eslint-lsp",
         "json-lsp",
         "lua-language-server",
         "markdownlint",
