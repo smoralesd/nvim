@@ -18,6 +18,7 @@ opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
+opt.ignorecase = true
 
 require("lazy").setup({
   { "echasnovski/mini.surround", version = "*", opts = {} },
