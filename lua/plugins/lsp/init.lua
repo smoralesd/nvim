@@ -6,7 +6,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
-    version = "4ea9083b6d3dff4ddc6da17c51334c3255b7eba5",
     dependencies = {
       {
         "folke/neoconf.nvim",
@@ -66,7 +65,7 @@ return {
           capabilities = vim.deepcopy(capabilities),
         }, servers[server] or {})
 
-        require("lspconfig")[server].setup(server_opts)
+        vim.lsp.config(server, server_opts)
       end
 
       local have_mason, mlsp = pcall(require, "mason-lspconfig")
