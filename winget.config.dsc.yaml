@@ -74,3 +74,12 @@ properties:
       settings:
         id: LLVM.LLVM
         source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Lua
+      directives:
+        description: Install Lua (including luarocks)
+        allowPrerelease: true
+      settings:
+        id: rjpcomputing.luaforwindows
+        source: winget
