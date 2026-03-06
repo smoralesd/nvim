@@ -157,7 +157,10 @@ return {
       -- file explorer
       { "<leader>fe", function() Snacks.explorer.open() end, desc = "File explorer" },
       -- terminal
-      { "<leader>tt", function() Snacks.terminal() end, desc = "Toggle Terminal" }
+      { "<leader>tt", function() Snacks.terminal() end, desc = "Toggle Terminal" },
+      -- notifications
+      { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification history" },
+      { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
     },
     init = function()
       vim.api.nvim_create_autocmd("User", {
