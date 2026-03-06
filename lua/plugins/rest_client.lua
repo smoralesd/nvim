@@ -1,6 +1,7 @@
 return {
   {
     "rest-nvim/rest.nvim",
+    enabled = false,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     init = function()
       -- keys (from lazy.nvim) does not seem to work with rest.nvim
