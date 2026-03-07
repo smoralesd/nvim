@@ -1,79 +1,76 @@
+local utils = require("util.treesitter")
+
 return {
-  -- Treesitter is a new parser generator tool that we can
-  -- use in Neovim to power faster and more accurate
-  -- syntax highlighting.
-  {
-    "nvim-treesitter/nvim-treesitter",
-    version = false, -- last release is way too old and doesn't work on Windows
-    build = ":TSUpdate",
-    event = { "LazyFile", "VeryLazy" },
-    init = function(plugin)
-      -- PERF: add nvim-treesitter queries to the rtp and it's custom query predicates early
-      -- This is needed because a bunch of plugins no longer `require("nvim-treesitter")`, which
-      -- no longer trigger the **nvim-treesitter** module to be loaded in time.
-      -- Luckily, the only things that those plugins need are the custom queries, which we make available
-      -- during startup.
-      require("lazy.core.loader").add_to_rtp(plugin)
-      require("nvim-treesitter.query_predicates")
-    end,
-    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
-    keys = {
-      { "<c-space>", desc = "Increment selection" },
-      { "<bs>", desc = "Decrement selection", mode = "x" },
-    },
-    opts = {
-      highlight = { enable = true },
-      indent = { enable = true },
-      ensure_installed = {
-        "bicep",
-        "c_sharp",
-        "diff",
-        "html",
-        "http",
-        "javascript",
-        "jsdoc",
-        "json",
-        "json5",
-        "jsonc",
-        "kusto",
-        "lua",
-        "luadoc",
-        "luap",
-        "markdown",
-        "markdown_inline",
-        "query",
-        "regex",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vimdoc",
-        "yaml",
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = false,
-          node_decremental = "<bs>",
-        },
-      },
-    },
-    ---@param opts TSConfig
-    config = function(_, opts)
-      if type(opts.ensure_installed) == "table" then
-        ---@type table<string, boolean>
-        local added = {}
-        opts.ensure_installed = vim.tbl_filter(function(lang)
-          if added[lang] then
-            return false
-          end
-          added[lang] = true
-          return true
-        end, opts.ensure_installed)
-      end
-      require("nvim-treesitter.configs").setup(opts)
-    end,
-  },
+  "nvim-treesitter/nvim-treesitter",
+  lazy = false,
+  build = ":TSUpdate",
+  config = function()
+    local parsers = {
+      "bicep",
+      "c_sharp",
+      "diff",
+      "html",
+      "http",
+      "javascript",
+      "jsdoc",
+      "json",
+      "json5",
+      "jsonc",
+      "kusto",
+      "lua",
+      "luadoc",
+      "luap",
+      "markdown",
+      "markdown_inline",
+      "query",
+      "regex",
+      "toml",
+      "tsx",
+      "typescript",
+      "vim",
+      "vimdoc",
+      "yaml",
+    }
+
+    require("nvim-treesitter").setup()
+    -- update the already installed parsers table
+    -- has() reads from the same table
+    utils.get_installed(true)
+
+    local missing = vim.tbl_filter(function(lang)
+      return not utils.has(lang)
+    end, parsers)
+
+    if #missing > 0 then
+      require("nvim-treesitter").install(missing, { summary = true }):await(function()
+        utils.get_installed(true)
+      end)
+    end
+
+    vim.api.nvim_create_autocmd("FileType", {
+      group = vim.api.nvim_create_augroup("lazyvim_treesitter", { clear = true }),
+      callback = function(ev)
+        local ft = ev.match -- match is the filetype of the buffer that triggered the event
+        local lang = vim.treesitter.language.get_lang(ft)
+
+        if not utils.has(lang) then
+          return
+        end
+
+        -- start treesitter => enable highlighting
+        if utils.has(ft, "highlights") then
+          pcall(vim.treesitter.start, ev.buf)
+        end
+
+        -- use nvim-treesitter indentations if available
+        if utils.has(ft, "indents") then
+          vim.api.nvim_set_option_value(
+            "indentexpr",
+            "v:lua.require'nvim-treesitter'.indentexpr()",
+            { scope = "local" }
+          )
+        end
+      end,
+    })
+  end,
 }
