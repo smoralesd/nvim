@@ -76,6 +76,15 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: GCC
+      directives:
+        description: Install GCC
+        allowPrerelease: true
+      settings:
+        id: BrechtSanders.WinLibs.POSIX.UCRT
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Lua
       directives:
         description: Install Lua (including luarocks)
