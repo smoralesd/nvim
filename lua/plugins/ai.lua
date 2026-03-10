@@ -6,6 +6,7 @@ return {
     opts = {
       suggestion = { enabled = false },
       panel = { enabled = false },
+      copilot_node_command = vim.fn.expand("$HOME") .. "/AppData/Local/nvm/v22.13.0/node",
     },
   },
   {
