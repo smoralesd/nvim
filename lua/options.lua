@@ -15,6 +15,7 @@ opt.clipboard = "unnamedplus" -- Sync with system clipboard
 -- opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
+opt.exrc = true -- Enable "local" .nvim.lua and .nvim.vim loading
 opt.expandtab = true -- Use spaces instead of tabs
 opt.foldlevel = 99 -- The higher the value the more folded regions are open
 opt.foldmethod = "expr" -- `foldexp` will be used for folding
