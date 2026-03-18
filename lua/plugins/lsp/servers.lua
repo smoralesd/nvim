@@ -4,6 +4,9 @@ return {
       Lua = {
         workspace = {
           checkThirdParty = false,
+          library = {
+            vim.env.VIMRUNTIME,
+          },
         },
         completion = {
           callSnippet = "Replace",
