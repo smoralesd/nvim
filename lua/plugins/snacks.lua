@@ -203,6 +203,21 @@ return {
               end
             end,
           }):map("<leader>ch")
+
+          Snacks.toggle({
+            name = "Colorizer",
+            get = function()
+              return require("colorizer").is_buffer_attached(0)
+            end,
+            set = function(enabled)
+              local c = require("colorizer")
+              if enabled then
+                c.attach_to_buffer(0)
+              else
+                c.detach_from_buffer(0)
+              end
+            end,
+          }):map("<leader>uc")
         end,
       })
     end,
