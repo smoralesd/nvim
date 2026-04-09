@@ -81,7 +81,11 @@ return {
   },
   {
     "coder/claudecode.nvim",
-    opts = {},
+    opts = {
+      terminal = {
+        split_width_percentage = 0.40,
+      },
+    },
     keys = {
       { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
       { "<leader>ac", "", desc = "+Claude", mode = { "n", "v" } },
