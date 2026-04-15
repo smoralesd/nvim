@@ -128,7 +128,7 @@ return {
       scroll = { enabled = true },
       terminal = {
         enabled = true,
-        shell = "pwsh",
+        shell = vim.fn.has("wsl") == 1 and "/usr/bin/zsh" or "pwsh",
       },
       words = { enabled = true },
     },
