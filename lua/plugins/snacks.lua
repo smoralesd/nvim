@@ -95,10 +95,23 @@ return {
       git = { enabled = true },
       gitbrowse = {
         enabled = true,
+        open = function(url)
+          if vim.fn.has("wsl") == 1 then
+            vim.fn.jobstart({ "rundll32.exe", "url.dll,FileProtocolHandler", url }, { detach = true })
+          else
+            vim.ui.open(url)
+          end
+        end,
         url_patterns = {
           ["dev.azure.com"] = {
-            file = "?path={file}&version=GB{branch}",
+            file =
+            "?path={file}&version=GB{branch}&line={line_start}&lineEnd={line_end}&lineStartColumn=1&lineEndColumn=1",
           },
+          ["office.visualstudio.com"] = {
+            file =
+            -- "?path={file}&version=GB{branch}&line={line_start}&lineEnd={line_end}&lineStartColumn=1&lineEndColumn=1&lineStyle=plain&_a=contents",
+            "?path={file}&version=GB{branch}&line={line_start}&lineEnd={line_end}&lineStartColumn=1&lineEndColumn=1",
+          }
         },
       },
       indent = { enabled = true },
