@@ -6,7 +6,9 @@ return {
     opts = {
       suggestion = { enabled = false },
       panel = { enabled = false },
-      copilot_node_command = vim.fn.expand("$HOME") .. "/AppData/Local/nvm/v22.13.0/node",
+      copilot_node_command = vim.fn.has("win32") == 1
+          and vim.fn.expand("$HOME") .. "/AppData/Local/nvm/v22.13.0/node"
+          or "node",
     },
   },
   {
@@ -25,9 +27,9 @@ return {
       },
     },
     keys = {
-      { "<c-s>", "<CR>", ft = "copilot-chat", desc = "Submit Prompt", remap = true },
-      { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
-      { "<leader>ap", "", desc = "+Copilot", mode = { "n", "v" } },
+      { "<c-s>",      "<CR>", ft = "copilot-chat", desc = "Submit Prompt", remap = true },
+      { "<leader>a",  "",     desc = "+ai",        mode = { "n", "v" } },
+      { "<leader>ap", "",     desc = "+Copilot",   mode = { "n", "v" } },
       {
         "<leader>apa",
         function()
@@ -87,14 +89,14 @@ return {
       },
     },
     keys = {
-      { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
-      { "<leader>ac", "", desc = "+Claude", mode = { "n", "v" } },
-      { "<leader>acc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
-      { "<leader>acf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
-      { "<leader>acr", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
+      { "<leader>a",   "",                               desc = "+ai",               mode = { "n", "v" } },
+      { "<leader>ac",  "",                               desc = "+Claude",           mode = { "n", "v" } },
+      { "<leader>acc", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
+      { "<leader>acf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude" },
+      { "<leader>acr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume Claude" },
       { "<leader>acC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
-      { "<leader>acb", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
-      { "<leader>acs", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
+      { "<leader>acb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
+      { "<leader>acs", "<cmd>ClaudeCodeSend<cr>",        mode = "v",                 desc = "Send to Claude" },
       {
         "<leader>acs",
         "<cmd>ClaudeCodeTreeAdd<cr>",
@@ -103,7 +105,7 @@ return {
       },
       -- Diff management
       { "<leader>aca", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
-      { "<leader>acd", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
+      { "<leader>acd", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Deny diff" },
     },
   },
 }
