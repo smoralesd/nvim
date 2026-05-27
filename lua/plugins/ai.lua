@@ -108,4 +108,10 @@ return {
       { "<leader>acd", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Deny diff" },
     },
   },
+  {
+    "carlos-algms/agentic.nvim",
+    opts = {
+      provider = "copilot-acp"
+    },
+  },
 }
