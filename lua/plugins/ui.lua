@@ -35,7 +35,10 @@ return {
         options = {
           theme = "tokyonight",
           globalstatus = true,
-          disabled_filetypes = { statusline = { "snacks_dashboard" } },
+          disabled_filetypes = {
+            statusline = { "snacks_dashboard", 'AgenticChat', 'AgenticInput', 'AgenticCode', 'AgenticFiles', 'AgenticDiagnostics' },
+            winbar = { 'AgenticChat', 'AgenticInput', 'AgenticCode', 'AgenticFiles', 'AgenticDiagnostics' },
+          },
         },
         sections = {
           lualine_a = { "mode" },

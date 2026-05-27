@@ -18,6 +18,10 @@ return {
   -- completion plugin with support for LSPs, cmdline, signature help and snippets.
   {
     "saghen/blink.cmp",
+    enabled = function()
+      -- disable blink on agentic input/prompt buffer
+      return not vim.tbl_contains({ "AgenticInput" }, vim.bo.filetype)
+    end,
     -- optional: provides snippets for the snippet source
     dependencies = {
       "rafamadriz/friendly-snippets",
