@@ -13,6 +13,7 @@ return {
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
+    enabled = false,
     dependencies = {
       { "zbirenbaum/copilot.lua" },
       { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
@@ -83,6 +84,7 @@ return {
   },
   {
     "coder/claudecode.nvim",
+    enabled = false,
     opts = {
       terminal = {
         split_width_percentage = 0.40,
