@@ -36,6 +36,7 @@ return {
       { "<leader>a",  "",                                                  desc = "+Copilot",                    mode = { "n", "v" } },
       { "<leader>ac", function() require("agentic").toggle() end,          desc = "Toggle Copilot",              mode = { "n", "v" } },
       { "<leader>af", function() require("agentic").add_file() end,        desc = "Add current file to context", mode = { "n", "v" } },
+      { "<leader>as", function() require("agentic").add_selection() end,   desc = "Add selection to context",    mode = { "n", "v" } },
       { "<leader>an", function() require("agentic").new_session() end,     desc = "Start new session",           mode = { "n", "v" } },
       { "<leader>ar", function() require("agentic").restore_session() end, desc = "Restore session",             mode = { "n", "v" } },
     },
